@@ -1,5 +1,6 @@
 const form = (() => {
   const heading = document.createElement("header");
+  heading.classList.add("d-flex", "justify-content-start")
   const form = document.createElement("form");
   form.setAttribute("class", "form-inline");
   const inputGroup = document.createElement("div");

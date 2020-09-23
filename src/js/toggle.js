@@ -1,4 +1,6 @@
 const toggle = (() => {
+  const heading = document.createElement("header");
+  heading.classList.add("d-flex", "justify-content-end")
   const toggleLabel = document.createElement("label");
   toggleLabel.setAttribute("class", "toggle");
   const toggleInput = document.createElement("input");
@@ -9,7 +11,9 @@ const toggle = (() => {
   toggleLabel.appendChild(toggleInput);
   toggleLabel.appendChild(toggleSpan);
 
-  return toggleLabel;
+  heading.appendChild(toggleLabel);
+
+  return heading;
 })();
 
 export default toggle;
