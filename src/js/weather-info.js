@@ -1,6 +1,7 @@
 const weather = (() => {
   const mainContent = document.createElement("div");
   mainContent.setAttribute("class", "info text-center");
+  // mainContent.setAttribute("class", "align-middle");
   const myLocation = document.createElement("h3");
   myLocation.setAttribute("class", "location");
   myLocation.innerText = "Lagos, NG";
@@ -8,7 +9,7 @@ const weather = (() => {
   myWeather.setAttribute("class", "weather");
   myWeather.innerText = "25°C";
   const humidity = document.createElement("p");
-  humidity.innerText = "Humidity: 28";
+  humidity.innerText = "Partly cloudy";
 
   mainContent.appendChild(myLocation);
   mainContent.appendChild(myWeather);

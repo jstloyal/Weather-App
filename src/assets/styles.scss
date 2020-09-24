@@ -71,7 +71,7 @@ body {
 .info {
   font-weight: bold;
   color: #fff;
-  margin-top: 200px;
+  margin-top: 150px;
   h2 {
     font-size: 70px;
     font-weight: bolder;
@@ -79,6 +79,10 @@ body {
   h3, p {
     font-size: 35px;
   }
+}
+
+.col {
+  font-weight: lighter;
 }
 
 .slider {
