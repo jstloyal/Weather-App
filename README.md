@@ -50,7 +50,7 @@ A weather app that allows you search for any city in the world and get the weath
   </a>
 </p>
 
-[Project live link]()
+[Project live link](https://rawcdn.githack.com/jstloyal/Weather-App/f90bdb424182c9d9e7e4159cba9fe3c7165b3dd7/dist/index.html)
 
 ## Contributing
 
