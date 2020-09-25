@@ -7,7 +7,8 @@ const form = (() => {
   inputGroup.classList.add("input-group", "mb-2", "mr-sm-2");
   inputGroup.setAttribute("id", "inlineForm");
   const input = document.createElement("input");
-  input.classList.add("form-control", "formInput", "text-center");
+  input.setAttribute("type", "text");
+  input.classList.add("form-control", "formInput", "text-center", "search");
   input.setAttribute("placeholder", "Enter a city...");
 
   inputGroup.appendChild(input);
