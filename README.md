@@ -30,7 +30,7 @@
 
 ## About The Project
 
-A weather app that allows you search for any city in the world and get the weather forecast in real time. Temperature are in Celsius and can also be toggled to Fahrenheit. The weather is served using Open Weather API.
+A weather app that allows you search for any city in the world and get the weather forecast in real time. Temperature are in Celsius and can also be toggled to Fahrenheit. The weather is served using Open Weather API. I also used DOM manipulation to dynamically render the homepage. All of the components of website is generated using Javascript alone.
 
 <p align="center">
   <a href="https://github.com/jstloyal/Weather-App">
