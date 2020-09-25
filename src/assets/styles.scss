@@ -82,6 +82,14 @@ body {
   padding: 5px;
 }
 
+.search::placeholder {
+  color: #fff;
+}
+
+.error::placeholder {
+  color: red;
+}
+
 .toggle {
   top: 25px;
   right: 5%;
