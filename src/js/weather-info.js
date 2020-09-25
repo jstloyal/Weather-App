@@ -9,11 +9,14 @@ const weather = (() => {
   // myWeather.innerText = "25°C";
   const humidity = document.createElement("p");
   humidity.setAttribute("class", "humidity");
+  const description = document.createElement("p");
+  description.setAttribute("class", "description");
   // humidity.innerText = "Partly cloudy";
 
   mainContent.appendChild(myLocation);
   mainContent.appendChild(myWeather);
   mainContent.appendChild(humidity);
+  mainContent.appendChild(description);
 
   return mainContent;
 })();
