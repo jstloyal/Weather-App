@@ -21,6 +21,15 @@ const cityResult = document.querySelector(".location");
 const currentTemp = document.querySelector(".weather");
 const currentStatus = document.querySelector(".humidity");
 const weatherDesc = document.querySelector(".description");
+const myToggle =  document.querySelector(".toggle");
+const toggler = document.querySelector(".toggler");
+const currentTemparature = document.querySelector(".currentTemparature");
+const high = document.querySelector(".todayHigh");
+const night = document.querySelector(".tonightLow");
+const myDesc = document.querySelector(".myDesc");
+const todayDesc = document.querySelector(".todayDesc");
+const tonightDesc = document.querySelector(".tonightDesc")
+const nextDayTemp = document.querySelector(".nextDay");
 
 const key = "9c560aafa1296b8c6d8ea89e37551594";
 
@@ -37,6 +46,32 @@ async function getWeatherInfo(value) {
   console.log(data);
 }
 
+const tempToF = (temp) => temp * (9 / 5) + 32;
+const convertTemp = (data) => {
+  const { main } = data;
+  const currentTempF = tempToF(data.main.temp);
+  const currentTemparatureF = tempToF(data.main.temp);
+  const highF = tempToF(data.main.temp_max);
+  const nightF = tempToF(data.main.temp_min);
+  const tomorrowF = tempToF(data.main.temp);
+
+  myToggle.addEventListener("change", () => {
+    if (toggler.checked) {
+      currentTemp.innerHTML = `${Math.floor(currentTempF)}°F`;
+      currentTemparature.innerHTML = `${Math.floor(currentTemparatureF)}°F`;
+      high.innerHTML = `${Math.floor(highF)}°F`;
+      night.innerHTML = `${Math.floor(nightF)}°F`;
+      nextDayTemp.innerHTML = `${Math.floor(tomorrowF)}°F`;
+    } else {
+      currentTemp.innerHTML = `${Math.floor(data.main.temp)}°C`;
+      currentTemparature.innerHTML = `${Math.floor(data.main.temp)}°C`;
+      high.innerHTML = `${Math.floor(data.main.temp_max)}°C`;
+      night.innerHTML = `${Math.floor(data.main.temp_min)}°C`;
+      nextDayTemp.innerHTML = `${Math.floor(data.main.temp)}°C`;
+    }
+  })
+}
+
 const test = getWeatherInfo("Lagos");
 
 weatherForm.addEventListener("submit", (e) => {
@@ -50,6 +85,14 @@ const displayData = (data) => {
   currentTemp.innerHTML = `${Math.floor(data.main.temp)}°C`;
   currentStatus.innerHTML = `Humidity: ${data.main.humidity}%`
   weatherDesc.innerHTML = `Description: ${data.weather[0].description}`;
+  currentTemparature.innerHTML = `${Math.floor(data.main.temp)}°C`;
+  myDesc.innerHTML = `${data.weather[0].description}`;
+  high.innerHTML = `${Math.floor(data.main.temp_max)}°C`;
+  todayDesc.innerHTML = `${data.weather[0].description}`;
+  night.innerHTML = `${Math.floor(data.main.temp_min)}°C`;
+  tonightDesc.innerHTML = `${data.weather[0].description}`;
+  nextDayTemp.innerHTML = `${Math.floor(data.main.temp)}°C`;
+  convertTemp(data);
 }
 
 const backgroundChange = (data) => {

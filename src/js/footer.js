@@ -9,52 +9,52 @@ const footer = (() => {
   current.setAttribute("class", "col");
   const mainText = document.createElement("p");
   mainText.innerHTML = "Current Weather";
-  const currentIcon = document.createElement("p");
-  currentIcon.innerHTML = "ICON";
-  const iconInfo = document.createElement("p");
-  iconInfo.innerHTML = "Partly cloudy";
+  const currentTemp = document.createElement("p");
+  currentTemp.setAttribute("class", "currentTemparature");
+  const currentDesc = document.createElement("p");
+  currentDesc.setAttribute("class", "myDesc");
 
   const today = document.createElement("div");
   today.setAttribute("class", "col");
   const todayText = document.createElement("p");
-  todayText.innerHTML = "Today";
-  const todayIcon = document.createElement("p");
-  todayIcon.innerHTML = "ICON";
-  const iconToday = document.createElement("p");
-  iconToday.innerHTML = "Partly cloudy";
+  todayText.innerHTML = "Today's high";
+  const todayHigh = document.createElement("p");
+  todayHigh.setAttribute("class", "todayHigh");
+  const todayDesc = document.createElement("p");
+  todayDesc.setAttribute("class", "todayDesc");
 
   const tonight = document.createElement("div");
   tonight.setAttribute("class", "col");
   const tonightText = document.createElement("p");
-  tonightText.innerHTML = "Tonight";
-  const tonightIcon = document.createElement("p");
-  tonightIcon.innerHTML = "ICON";
-  const iconTonight = document.createElement("p");
-  iconTonight.innerHTML = "Partly cloudy";
+  tonightText.innerHTML = "Tonight's low";
+  const tonightLow = document.createElement("p");
+  tonightLow.setAttribute("class", "tonightLow");
+  const tonightDesc = document.createElement("p");
+  tonightDesc.setAttribute("class", "tonightDesc");
 
   const tomorrow = document.createElement("div");
   tomorrow.setAttribute("class", "col");
   const tomorrowText = document.createElement("p");
   tomorrowText.innerHTML = "Tomorrow";
-  const tomorrowIcon = document.createElement("p");
-  tomorrowIcon.innerHTML = "ICON";
+  const tomorrowTemp = document.createElement("p");
+  tomorrowTemp.setAttribute("class", "nextDay");
   const iconTomorrow = document.createElement("p");
-  iconTomorrow.innerHTML = "Partly cloudy";
+  iconTomorrow.innerHTML = "Clear sky";
 
   current.appendChild(mainText);
-  current.appendChild(currentIcon);
-  current.appendChild(iconInfo);
+  current.appendChild(currentTemp);
+  current.appendChild(currentDesc);
 
   today.appendChild(todayText);
-  today.appendChild(todayIcon);
-  today.appendChild(iconToday);
+  today.appendChild(todayHigh);
+  today.appendChild(todayDesc);
 
   tonight.appendChild(tonightText);
-  tonight.appendChild(tonightIcon);
-  tonight.appendChild(iconTonight);
+  tonight.appendChild(tonightLow);
+  tonight.appendChild(tonightDesc);
 
   tomorrow.appendChild(tomorrowText);
-  tomorrow.appendChild(tomorrowIcon);
+  tomorrow.appendChild(tomorrowTemp);
   tomorrow.appendChild(iconTomorrow);
 
   listRow.appendChild(current);
