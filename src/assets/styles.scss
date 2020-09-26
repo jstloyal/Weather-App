@@ -60,6 +60,34 @@ body {
   background-color: rgba(39, 131, 236, 0.3);
 }
 
+// Add responsiveness
+@media only screen and (max-width: 700px) {
+  #myContainer {
+    height: 180px;
+    font-size: .9rem;
+    font-weight: 500;
+    bottom: 0;
+    position: fixed;
+  }
+
+  .formInput {
+    font-size: 20px;
+    width: 60%;
+  }
+
+  .toggle {
+    top: 20px;
+  }
+
+  .info .description {
+    font-size: 20px;
+  }
+
+  .info .humidity {
+    font-size: 25px;
+  }
+}
+
 // #inlineForm
 .formInput {
   background-color: rgba(39, 131, 236, 0.3) !important;

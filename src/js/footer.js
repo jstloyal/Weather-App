@@ -2,7 +2,7 @@ const footer = (() => {
   const content = document.createElement('div');
   content.setAttribute('class', 'container-fluid');
   const listRow = document.createElement('div');
-  listRow.setAttribute('class', 'row align-items-center');
+  listRow.setAttribute('class', 'row align-items-center d-flex flex-sm-row');
   listRow.setAttribute('id', 'myContainer');
 
   const current = document.createElement('div');
