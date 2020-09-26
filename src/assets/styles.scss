@@ -1,0 +1,197 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-image: url('https://images.unsplash.com/photo-1561583534-09e822ba83ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1612&q=80');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cloudy,
+.default {
+  background-image: url("https://images.unsplash.com/photo-1561583534-09e822ba83ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1612&q=80");
+}
+
+.clear {
+  background-image: url("https://images.unsplash.com/photo-1596776997263-4deb9f191af1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80?");
+}
+
+.rainy {
+  background-image: url("https://images.unsplash.com/photo-1493314894560-5c412a56c17c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+}
+
+.misty {
+  background-image: url("https://images.unsplash.com/photo-1487188274754-65d7aaa5b938?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80");
+}
+
+.night {
+  background-image: url("https://images.unsplash.com/photo-1599323712578-c622d2c7179e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+}
+
+.day {
+  background-image: url("https://images.unsplash.com/photo-1557637675-2149a5295fb7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+}
+
+.windy {
+  background-image: url("https://images.unsplash.com/photo-1527482937786-6608f6e14c15?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+}
+
+.input-group .form-control {
+  color: #fff !important;
+}
+
+#myContainer {
+  position: absolute;
+  width: 100% !important;
+  margin: auto;
+  box-sizing: border-box;
+  height: 200px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  background-color: rgba(39, 131, 236, 0.3);
+}
+
+// Add responsiveness
+@media only screen and (max-width: 700px) {
+  #myContainer {
+    height: 180px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    bottom: 0;
+    position: fixed;
+  }
+
+  .formInput {
+    font-size: 20px;
+    width: 60%;
+  }
+
+  .toggle {
+    top: 20px;
+  }
+
+  .info .description {
+    font-size: 20px;
+  }
+
+  .info .humidity {
+    font-size: 25px;
+  }
+}
+
+// #inlineForm
+.formInput {
+  background-color: rgba(39, 131, 236, 0.3) !important;
+  border-radius: 8px;
+  border: none;
+  font-size: 25px;
+  margin-top: 10px;
+  margin-left: 15px;
+  padding: 1px;
+  color: #fff;
+}
+
+.formInput i {
+  font-size: 15px;
+  color: #fff;
+  border: none;
+  padding: 5px;
+}
+
+.search::placeholder {
+  color: #fff;
+}
+
+.error::placeholder {
+  color: red;
+}
+
+.toggle {
+  top: 25px;
+  right: 5%;
+  position: absolute;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.info {
+  font-weight: bold;
+  color: #fff;
+  margin-top: 5%;
+
+  h2 {
+    font-size: 70px;
+    font-weight: bolder;
+  }
+
+  h3,
+  p {
+    font-size: 35px;
+  }
+}
+
+.col {
+  font-weight: lighter;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(39, 131, 236, 0.3);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider::before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round::before {
+  border-radius: 50%;
+}
